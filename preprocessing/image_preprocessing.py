@@ -1,3 +1,7 @@
+import os
+from PIL import Image
+
+
 def reshape_image(image, shape):
     """Resize an image to the given shape."""
     return image.resize(shape, Image.ANTIALIAS)
