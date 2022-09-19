@@ -1,3 +1,11 @@
+import torch
+import torch.nn as nn
+import torch.utils.data as data
+from torchvision import transforms
+import torchvision.models as models
+import torchvision.transforms as transforms
+from torch.nn.utils.rnn import pack_padded_sequence
+
 class CustomCocoDataset(data.Dataset):
     """COCO Custom Dataset compatible with torch.utils.data.DataLoader."""
     def __init__(self, data_path, coco_json_path, vocabulary, transform=None):
